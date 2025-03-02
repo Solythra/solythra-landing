@@ -1,6 +1,7 @@
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white text-center p-6">
+      <img src="/solythra-logo.png" alt="Solythra Logo" className="w-40 h-auto mt-6" />
       <h1 className="text-4xl md:text-6xl font-bold">🚀 Solythra Has Awakened</h1>
       <p className="mt-4 text-lg md:text-xl opacity-80">
         The AI-Powered DeFi & NFT Ecosystem
