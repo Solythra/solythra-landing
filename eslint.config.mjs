@@ -1,14 +1,19 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import next from "next";
+import tailwindcss from "eslint-plugin-tailwindcss";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
-
-export default eslintConfig;
+export default [
+  js.configs.recommended,
+  next.configs.recommended,
+  {
+    plugins: {
+      tailwindcss,
+    },
+    rules: {
+      "tailwindcss/no-custom-classname": "off", // Allows custom classnames in Tailwind
+      "react/jsx-no-undef": "error", // Prevents undefined JSX components
+      "no-unused-vars": "warn", // Warns about unused variables instead of erroring
+      "no-console": "warn", // Allows console logs, but warns to clean up for production
+    },
+  },
+];
