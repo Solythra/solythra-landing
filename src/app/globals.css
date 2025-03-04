@@ -2,69 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🔹 Background Styling */
 body {
   background: url('/solythra-bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* 🔹 Hero Section */
 .hero-title {
-  font-size: 5rem;
+  font-size: clamp(3rem, 8vw, 5rem);
   font-weight: bold;
   text-align: center;
+  color: #A78BFA; /* Soft glowing violet */
+  text-shadow: 0px 0px 15px rgba(167, 139, 250, 0.8);
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   text-align: center;
   margin-top: 0.5rem;
+  color: #C4B5FD; /* Lilac glow */
+  text-shadow: 0px 0px 10px rgba(196, 181, 253, 0.7);
 }
 
 .hero-description {
   text-align: center;
   max-width: 600px;
   margin: auto;
-  font-size: 1rem;
-  opacity: 0.8;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  opacity: 0.85;
+  color: #E0E7FF; /* Muted blue for soft contrast */
+  text-shadow: 0px 0px 5px rgba(224, 231, 255, 0.5);
+  line-height: 1.5;
 }
 
+/* 🔹 Roadmap Section (Bottom Left - Responsive) */
 .roadmap {
   position: absolute;
-  bottom: 10%;
-  left: 5%;
+  bottom: 12vh;
+  left: 5vw;
   text-align: left;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: #38BDF8; /* Bright cyan glow */
+  text-shadow: 0px 0px 10px rgba(56, 189, 248, 0.8);
 }
 
+.roadmap h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* 🔹 Mint Section (Bottom Right - Responsive) */
 .mint-section {
   position: absolute;
-  bottom: 10%;
-  right: 5%;
+  bottom: 12vh;
+  right: 5vw;
   text-align: right;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
 .mint-button {
   display: inline-block;
-  padding: 12px 24px;
-  background: linear-gradient(to right, #3b82f6, #9333ea);
+  padding: 14px 28px;
+  background: linear-gradient(to right, #4F46E5, #9333EA);
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0px 0px 20px rgba(79, 70, 229, 0.7);
 }
 
 .mint-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0px 0px 35px rgba(147, 51, 234, 1);
 }
 
+/* 🔹 Social Links */
+.mint-section a {
+  color: #8B5CF6; /* Vibrant Purple */
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.mint-section a:hover {
+  color: #A78BFA;
+  text-shadow: 0px 0px 8px rgba(167, 139, 250, 0.8);
+}
+
+/* 🔹 Footer */
 .footer {
   position: absolute;
-  bottom: 2%;
+  bottom: 3vh;
   width: 100%;
   text-align: center;
   font-size: 0.8rem;
-  opacity: 0.7;
+  color: #94A3B8; /* Muted gray/blue */
+  opacity: 0.75;
 }

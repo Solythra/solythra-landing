@@ -8,6 +8,8 @@ export const SITE_CONFIG = {
 
 export const socialLinks = {
   twitter: "https://twitter.com/Solythra",
-  discord: "https://discord.gg/Solythra",
+  discord: "https://discord.gg/99TtTHyFet",
+  telegram: "https://t.me/Solythra",
+  github: "https://github.com/Solythra",
   nftSale: "https://manifold.gallery/solythra",
 };
